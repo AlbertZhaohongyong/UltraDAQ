@@ -17,7 +17,6 @@ Windows 10（64 位，中英文）
 注：本文以 Windows 7（64 位，中文）为例介绍软件安装和运行方法。
 
 #### 页面布局及功能
-
 1.  主菜单
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/1103/171037_5568d631_6550018.png "屏幕截图.png")
@@ -35,33 +34,29 @@ Windows 10（64 位，中英文）
 - **Save：** 点击按钮，可将当前采集的波形数据存储到本地。
 
 #### 名词解释
-
-TrigSoure：触发源，可在下拉菜单中选择模拟通道 CHAN1~CHAN4 或 EXT（外触发）作为触发信源，默认配置为外触发。
-TrigMode：触发模式，可在下拉菜单中选择SINGLE（单次触发）、NORMAL（普通触发）、AUTO（自动触发），默认触发方式为单次触发（SINGLE）。
-TrigLevel：触发电平，当触发源为 CHAN1~CHAN4 时，触发电平的取值范围与通道当前的档位有关；当触发源为EXT 时，触发电平的取值范围为-5V 至+5V；默认为 500mV。
-MemDepth：存储深度，可在下拉菜单中选择1K、10K、100K、1M, 默认为 10K。
-Holdoff：触发释抑，用于稳定触发复杂的重复波形，可调范围为 8 ns 至 10 s，默认为 8ns。
-HorzScale：水平时基，可调范围为 200 ps/div 至 1 ks/div，默认为 1us。
-HorzPos：水平偏移，取值范围与时基有关，默认为 0。
-Collect：勾选表示该通道使能。
-Device：该通道所属的注册设备的名称。
-Channel：注册设备的通道号。
-ChannelTag：通道号标签，用于标识通道。
-Mark：通道标识备注，可用于对ChannelTag进行备注。
-Scale：用于配置该通道的垂直档位，单位 V。
-Offset：用于配置该通道的垂直偏移，单位 V。
-Impedance：可在下拉菜单中选择 50Ω 或 1 MΩ 作为该通道的输入阻抗，默认配置为 1 MΩ。
-Coupling：可在下拉菜单中选择耦合方式为直流（DC）、交流（AC）和接地（GND），默认配置为直流。
-Attenuation：可在下拉菜单中选择探头衰减比为*1 或*10，默认配置为*1。
-
+TrigSoure：触发源，可在下拉菜单中选择模拟通道 CHAN1-CHAN4 或 EXT（外触发）作为触发信源，默认配置为外触发。  
+TrigMode：触发模式，可在下拉菜单中选择SINGLE（单次触发）、NORMAL（普通触发）、AUTO（自动触发），默认触发方式为单次触发（SINGLE）。  
+TrigLevel：触发电平，当触发源为 CHAN1-CHAN4 时，触发电平的取值范围与通道当前的档位有关；当触发源为EXT 时，触发电平的取值范围为-5V 至+5V；默认为 500mV。  
+MemDepth：存储深度，可在下拉菜单中选择1K、10K、100K、1M, 默认为 10K。  
+Holdoff：触发释抑，用于稳定触发复杂的重复波形，可调范围为 8 ns 至 10 s，默认为 8ns。  
+HorzScale：水平时基，可调范围为 200 ps/div 至 1 ks/div，默认为 1us。  
+HorzPos：水平偏移，取值范围与时基有关，默认为 0。  
+Collect：勾选表示该通道使能。  
+Device：该通道所属的注册设备的名称。  
+Channel：注册设备的通道号。  
+ChannelTag：通道号标签，用于标识通道。  
+Mark：通道标识备注，可用于对ChannelTag进行备注。  
+Scale：用于配置该通道的垂直档位，单位 V。  
+Offset：用于配置该通道的垂直偏移，单位 V。  
+Impedance：可在下拉菜单中选择 50Ω 或 1 MΩ 作为该通道的输入阻抗，默认配置为 1 MΩ。  
+Coupling：可在下拉菜单中选择耦合方式为直流（DC）、交流（AC）和接地（GND），默认配置为直流。  
+Attenuation：可在下拉菜单中选择探头衰减比为*1 或*10，默认配置为*1。  
 
 
 #### 软件开发者
-
 1.  AlbertZhaohongyong
 
 #### 技术
-
 1.  多线程同步
 2.  Visa通信
 3.  Socket通信
