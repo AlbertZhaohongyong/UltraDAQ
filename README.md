@@ -57,6 +57,5 @@ Attenuation：可在下拉菜单中选择探头衰减比为*1 或*10，默认配
 1.  AlbertZhaohongyong
 
 #### 技术
-1.  多线程同步
-2.  Visa通信
-3.  Socket通信
+1.  多线程同步、MultipleThreadResetEvent
+2.  Visa通信、Socket通信
