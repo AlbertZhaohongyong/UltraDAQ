@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CE69AC2-7E34-4714-9734-19D7F0049DAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UltraDAQ_Lite</RootNamespace>
+    <AssemblyName>UltraDAQ_Lite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.0\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonBaseModule\CControlProp.cs" />
+    <Compile Include="CommonBaseModule\CMutipleThreadSendCmd.cs" />
+    <Compile Include="CommonBaseModule\CString2Value.cs" />
+    <Compile Include="CommonBaseModule\CUnitTransform.cs" />
+    <Compile Include="CommonBaseModule\CVisa.cs" />
+    <Compile Include="CommonBaseModule\visa32.cs" />
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\CGlobalCmd.cs" />
+    <Compile Include="Global\CGlobalColor.cs" />
+    <Compile Include="Global\CGlobalValue.cs" />
+    <Compile Include="Module\Module_Channel.cs" />
+    <Compile Include="Module\Module_Device.cs" />
+    <Compile Include="Module\Module_DeviceManage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubForm\Form_DeviceConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Form_DeviceConfig.Designer.cs">
+      <DependentUpon>Form_DeviceConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Form_Progressbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Form_Progressbar.Designer.cs">
+      <DependentUpon>Form_Progressbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Form_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Form_Register.Designer.cs">
+      <DependentUpon>Form_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Form_WaveMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Form_WaveMonitor.Designer.cs">
+      <DependentUpon>Form_WaveMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCDevice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCDevice.Designer.cs">
+      <DependentUpon>UCDevice.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SubForm\Form_DeviceConfig.resx">
+      <DependentUpon>Form_DeviceConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Form_Progressbar.resx">
+      <DependentUpon>Form_Progressbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Form_Register.resx">
+      <DependentUpon>Form_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Form_WaveMonitor.resx">
+      <DependentUpon>Form_WaveMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCDevice.resx">
+      <DependentUpon>UCDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\offline.png" />
+    <Content Include="Resources\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary_ThreadManage\ClassLibrary_ThreadManage.csproj">
+      <Project>{59C8BD7F-4183-403C-83DD-0FD362008904}</Project>
+      <Name>ClassLibrary_ThreadManage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
